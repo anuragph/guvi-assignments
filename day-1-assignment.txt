@@ -1,0 +1,24 @@
+**********
+DAY 1 ASSIGNMENT
+**********
+
+Assignment tasks: https://docs.google.com/document/d/1QznT1zM4mI6dG0TODx5Xjs1GquMoSHO3xZ1USDnVM-w/edit
+
+
+
+
+2. WRITE A BLOG ON DIFFERENCE BETWEEN HTTP1.1 VS HTTP2
+
+HTTP is the protocol using which browsers talk to websites. HTTP/2 is a newer version of the protocol which was released in 2015 to improve upon the older HTTP/1.1 which has been in effect since 1999. HTTP/2 is much faster than its predecessor.
+
+There are a few different ways in which HTTP/2 improves the existing system.
+
+First, HTTP/2 prioritizes the resources while loading. The developer can specify what to load first so that the user gets the content most important to them first. All other resources can be loaded later in the background. By receiving the important content first, the user gets the illusion that the webpage is loading much faster.
+
+Second, HTTP/2 makes use of multiplexing. This means that multiple streams of data can be sent over a single TCP connection. This was not possible earlier So, one resourse could block the rest of the resources from loading. With multiplexing, the data is broken up into binary code and numbered (so that the client knows which piece of data belongs to which stream), and sent together, instead of one by one, over the connection. This is faster and prevents one resource from blocking up the others.
+
+Third, in an HTTP/2 connection the server can send additional resources the client will need without the client asking for it. This is called server push For example, CSS files which are needed to render the page can be sent to the client, without needing a seperate request for it.
+
+Finally, the headers in an HTTP/2 connection are compressed by a method called HPACK which makes the resourses even smaller. This also results in faster load times.
+
+----------

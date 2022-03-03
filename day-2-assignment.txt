@@ -1,0 +1,67 @@
+********************
+DAY 2 ASSIGNMENT
+********************
+
+Assignment tasks: https://docs.google.com/document/d/1v0lcqV9v0QAZfjEIKKc5eRDC_mEJkl4f2cH1QuiXi3c/edit
+
+
+
+
+
+1. LIST 5 DIFFERENCE BETWEEN BROWSER JS(CONSOLE) V NODEJS
+ 
+The browser and Node.js both use JavaScript as its programming language. However, despite this there are a few differences in running JS in the browser and Node.js.
+
+    a. Application: Browser JS is used for client-side programming and can only run in the browser. Node.js is used for server-side programming and can run outside the browser.
+
+    b. Access and permissions: Browser JS has access to objects like window and document document which are provided by the browser and can alter the DOM. Node.js does not have any such access, but instead, it has access to the computer's file system and, can read and write files directly to the system. This is not possible in browsers due to security concerns.
+
+    c. Engine: Browser JS can run in differnt JS engines like V8 (Chrome), Chakra (Edge), Spider Monkey (Firefox). Node.js runs only on the V8 engine.
+
+    d. UI: Browser JS can have a GUI but Node.js does not and runs on a CLI.
+
+    e. Frameworks: They have differnt respective frameworks. React, Angular and Vue are some browser JS frameworks. Express is a widely used Node.js framework.
+
+----------
+
+
+
+2. WATCH & SUMMARY 5 POINTS - https://www.youtube.com/watch?v=SmE4OwHztCc&ab_channel=JSConf
+
+RYAN SEDDON: SO HOW DOES THE BROWSER ACTUALLY RENDER A WEBSITE | JSCONF EU 2015
+
+(a) A browser has 4 parts to it: Bindings, Platform, Rendering, JavaScript VM.
+
+(b) A webpage is rendered by first parsing HTML, CSS and JavaScript. After that the render tree is built. The page is then laid out and a bitmap is created which is painted to the screen.
+
+Parsing HTML, CSS, JS -> Render Tree -> Layout -> Paint
+
+Visualization of how a webpage is rendered: https://www.youtube.com/watch?v=ZTnIxIA5KGw
+
+(c) HTML parsing creates the Document Object Model (DOM). The parser can be halted by 'script', 'link' and 'style' tags. The script can alter the document and, 'link' and 'style' can halt the script if it is querying information about DOM elements.
+
+While parsing is paused the browser will create a separate thread (process) to try and fetch external resources like images, stylesheets and scripts. After rendering is complete scripts can alter DOM elements which makes the parser recreate the entire tree and DOM (reentrancy).
+
+Putting the script at the end and, using defer and async can help to prevent parsing interuption.
+
+(d) CSS parsing created the CSS Object Model (CSSOM). DOM + CSSOM is what actually shows on the screen.
+
+(e) Render tree is made up of 4 trees:  Render Objects, Render Styles, Render Layers and Line Boxes. It does not include non-visual elements like head, scripts or hidden nodes (display: none;)
+
+----------
+
+
+
+4. EXECUTE THE BLEOW CODE AND WRITE YOUR DESCRIPTION IN A TXT FILE
+
+a. typeof(1)  ->  number
+b. typeof(1.1)  ->  number
+c. typeof('1.1')  ->  string
+d. typeof(true)  ->  boolean
+e. typeof(null)  ->  object
+f. typeof(undefined)  ->  undefined
+g. typeof([])  ->  object
+h. typeof({})  ->  object
+i. typeof(NaN)  ->  number
+
+----------
